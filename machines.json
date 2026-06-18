@@ -1,0 +1,212 @@
+[
+  {
+    "id": "prensa-45",
+    "name": "Prensa 45°",
+    "code": "TM91 / TB56",
+    "muscle_primary": "Cuádriceps",
+    "muscles": ["Cuádriceps", "Glúteos", "Isquiotibiales", "Pantorrillas"],
+    "cover_emoji": "🦵",
+    "difficulty": "Principiante",
+    "video_placeholder": "https://www.youtube.com/embed/IZxyjW7MPJQ",
+    "description": "La prensa 45° es una de las máquinas más efectivas para desarrollar fuerza y masa muscular en el tren inferior. Permite trabajar con cargas elevadas de forma controlada y segura.",
+    "setup": [
+      "Regulá el respaldo según tu altura: la espalda baja debe quedar completamente apoyada.",
+      "Posicioná los pies en la plataforma a la altura de los hombros, con los dedos levemente hacia afuera.",
+      "La distancia de los pies determina el énfasis muscular: más arriba = glúteos, más abajo = cuádriceps.",
+      "Ajustá los topes de seguridad a la altura correcta antes de cargar peso."
+    ],
+    "how_to": [
+      "Destrabá los seguros y bajá la plataforma de forma controlada hasta que las rodillas formen aproximadamente 90°.",
+      "Empujá con toda la planta del pie, extendiendo las piernas sin trabar completamente las rodillas.",
+      "Mantené la espalda pegada al respaldo durante todo el movimiento.",
+      "Controlá la bajada: no dejes caer el peso."
+    ],
+    "common_errors": [
+      "Despegar la espalda baja del respaldo al bajar (riesgo de lesión lumbar).",
+      "Trabar las rodillas al extender (pérdida de tensión muscular y estrés articular).",
+      "Bajar demasiado sin tener flexibilidad suficiente.",
+      "Rebotar el peso en el punto más bajo."
+    ],
+    "tips": [
+      "Para mayor activación de cuádriceps: pies bajos y angostos.",
+      "Para mayor activación de glúteos: pies altos y abiertos.",
+      "Empujá con los talones para mayor conexión con glúteos e isquios.",
+      "Comenzá siempre con un peso de calentamiento, especialmente al principio."
+    ]
+  },
+  {
+    "id": "hack-squat",
+    "name": "Hack Squat",
+    "code": "TB57",
+    "muscle_primary": "Cuádriceps",
+    "muscles": ["Cuádriceps", "Glúteos", "Isquiotibiales"],
+    "cover_emoji": "⚡",
+    "difficulty": "Intermedio",
+    "video_placeholder": "https://www.youtube.com/embed/0tn5K9NlCfo",
+    "description": "El Hack Squat es una variante de la sentadilla con trayectoria guiada que permite trabajar el cuádriceps con alta intensidad y gran rango de movimiento, con menor estrés en la columna.",
+    "setup": [
+      "Posicioná los hombros bajo los apoyos acolchados y la espalda plana contra el respaldo.",
+      "Pies a la altura de los hombros en la plataforma, ligeramente elevados respecto al asiento.",
+      "Regulá la altura del punto de inicio para que la posición sea cómoda y controlada.",
+      "Verificá que los topes de seguridad estén bien ajustados antes de comenzar."
+    ],
+    "how_to": [
+      "Destrabá los seguros y bajá de forma controlada doblando las rodillas.",
+      "Bajá hasta que los muslos queden paralelos al piso o un poco más abajo si tu movilidad lo permite.",
+      "Empujá hacia arriba extendiendo las piernas de manera pareja y controlada.",
+      "No trab=es las rodillas al llegar arriba: mantené una leve flexión."
+    ],
+    "common_errors": [
+      "Despegar los talones de la plataforma al bajar.",
+      "Dejar que las rodillas colapsen hacia adentro.",
+      "Usar demasiado peso y perder el rango de movimiento.",
+      "Bajar demasiado rápido sin control."
+    ],
+    "tips": [
+      "Para focalizar cuádriceps: pies más bajos en la plataforma.",
+      "Para incluir más glúteos: pies más altos.",
+      "Una sentadilla profunda y controlada es más efectiva que un medio rango con mucho peso.",
+      "Usá calzado con suela plana para mejor base."
+    ]
+  },
+  {
+    "id": "remo-bajo",
+    "name": "Remo Bajo / Remo Sentado",
+    "code": "BH32 / TY",
+    "muscle_primary": "Dorsal",
+    "muscles": ["Dorsal ancho", "Romboides", "Trapecio medio", "Bíceps"],
+    "cover_emoji": "💪",
+    "difficulty": "Principiante",
+    "video_placeholder": "https://www.youtube.com/embed/GZbfZ033f74",
+    "description": "El remo bajo en polea es un ejercicio fundamental para el desarrollo de la espalda. Trabaja el dorsal, los romboides y el trapecio con un movimiento natural y seguro.",
+    "setup": [
+      "Sentate con la espalda erguida y los pies apoyados en los topes.",
+      "Seleccioná el agarre: neutro (paralelo) para mayor dorsal, supino para más bíceps.",
+      "Ajustá el asiento para que los brazos queden horizontales al agarrar el cable.",
+      "Mantené las rodillas levemente flexionadas durante todo el movimiento."
+    ],
+    "how_to": [
+      "Desde la posición extendida, iniciá el movimiento retrayendo las escápulas (apretá los omóplatos).",
+      "Jalá el agarre hacia tu abdomen bajo o cintura, manteniendo los codos pegados al cuerpo.",
+      "Apretá la espalda en el punto de máxima contracción por un segundo.",
+      "Extendé los brazos de vuelta de manera controlada, dejando que la espalda se estire al final."
+    ],
+    "common_errors": [
+      "Usar la inercia del torso para mover el peso (balanceo).",
+      "Dejar que los hombros se eleven al jalar.",
+      "No completar la retracción escapular al contraer.",
+      "Soltrar el peso rápido en la fase de regreso."
+    ],
+    "tips": [
+      "Pensá en 'meter los codos en los bolsillos traseros' para activar mejor el dorsal.",
+      "La espalda hace el trabajo, las manos solo sostienen el agarre.",
+      "Variar el agarre cada ciertos ciclos para estimular diferentes fibras.",
+      "Controlá especialmente la fase excéntrica (vuelta) para mayor hipertrofia."
+    ]
+  },
+  {
+    "id": "press-pecho",
+    "name": "Press de Pecho Sentado",
+    "code": "TM04",
+    "muscle_primary": "Pectoral",
+    "muscles": ["Pectoral mayor", "Deltoides anterior", "Tríceps"],
+    "cover_emoji": "🔥",
+    "difficulty": "Principiante",
+    "video_placeholder": "https://www.youtube.com/embed/8iPEnn-ltC8",
+    "description": "El press de pecho tipo Hammer en posición sentada ofrece una trayectoria convergente que imita el movimiento natural del pectoral, con mayor activación que el press plano en barra.",
+    "setup": [
+      "Regulá el asiento para que las manijas queden a la altura del pecho medio.",
+      "Sentate con la espalda plana contra el respaldo, sin arquear la zona lumbar.",
+      "Agarrá las manijas con las palmas hacia abajo o neutras, según el modelo.",
+      "Los codos deben quedar ligeramente por debajo de los hombros al inicio."
+    ],
+    "how_to": [
+      "Desde la posición de codos atrás, empujá las manijas hacia adelante extendiendo los brazos.",
+      "Juntá levemente las manos al final (convergencia) para mayor activación del pectoral.",
+      "Volvé de manera controlada hasta sentir el estiramiento en el pecho.",
+      "No dejes que el peso jale tus brazos más atrás de lo que tu movilidad permite."
+    ],
+    "common_errors": [
+      "Arquear la espalda para mover más peso (quita trabajo al pecho).",
+      "Bloquear los codos al extender (estrés en la articulación).",
+      "Poner las manijas demasiado altas (trabaja más hombros que pecho).",
+      "No controlar la fase de regreso."
+    ],
+    "tips": [
+      "Para mayor activación del pectoral: imaginá que intentás juntar los codos al empujar.",
+      "Asiento más bajo = más pectoral inferior. Más alto = más pectoral superior.",
+      "Una repetición lenta y controlada vale más que cinco rápidas.",
+      "Precalentá el hombro antes de cargar mucho peso."
+    ]
+  },
+  {
+    "id": "jalon-dorsal",
+    "name": "Jalón Dorsal",
+    "code": "BH08 / BH32",
+    "muscle_primary": "Dorsal",
+    "muscles": ["Dorsal ancho", "Bíceps", "Romboides", "Trapecio inferior"],
+    "cover_emoji": "🏋️",
+    "difficulty": "Principiante",
+    "video_placeholder": "https://www.youtube.com/embed/CAwf7n6Luuc",
+    "description": "El jalón en polea alta es el ejercicio de espalda por excelencia. Permite desarrollar amplitud y grosor en el dorsal con una mecánica segura y adaptable a todos los niveles.",
+    "setup": [
+      "Regulá el rodillo de apoyo para que quede firme sobre los muslos al sentarte.",
+      "Tomá la barra con agarre prono (palmas hacia afuera) a más de la anchura de hombros.",
+      "Inclinate levemente hacia atrás manteniendo el pecho arriba.",
+      "Elegí el peso adecuado: debés poder completar el rango sin compensar."
+    ],
+    "how_to": [
+      "Jalá la barra hacia el pecho superior (zona de la clavícula), no hacia la nuca.",
+      "Iniciá el movimiento deprimiendo los hombros hacia abajo y atrás.",
+      "Llevá los codos hacia los costados y abajo, apretando el dorsal.",
+      "Subí la barra de manera controlada extendiendo los brazos completamente."
+    ],
+    "common_errors": [
+      "Jalar detrás de la nuca (riesgo cervical sin beneficio adicional).",
+      "Usar demasiado peso y compensar con el torso.",
+      "No extender completamente los brazos en la subida.",
+      "Dejar que los hombros suban hacia las orejas al bajar el peso."
+    ],
+    "tips": [
+      "Pensá en llevar los codos hacia los bolsillos traseros del pantalón.",
+      "El pecho hacia arriba durante todo el movimiento.",
+      "Variá el agarre: supino (palmas hacia vos) para más bíceps.",
+      "Un segundo de pausa con el dorsal contraído multiplica los resultados."
+    ]
+  },
+  {
+    "id": "smith-machine",
+    "name": "Máquina Smith",
+    "code": "TM09 / BH23",
+    "muscle_primary": "Múltiple",
+    "muscles": ["Pectoral", "Cuádriceps", "Glúteos", "Hombros", "Tríceps"],
+    "cover_emoji": "🏆",
+    "difficulty": "Principiante",
+    "video_placeholder": "https://www.youtube.com/embed/nRgxYX2Ve9w",
+    "description": "La Máquina Smith es una barra guiada sobre rieles verticales que permite realizar press de banca, sentadillas, press militar y más, con alta seguridad y control de trayectoria.",
+    "setup": [
+      "Posicioná el banco, el respaldo o tu cuerpo según el ejercicio a realizar.",
+      "Ajustá la altura de la barra para que el agarre sea cómodo sin forzar.",
+      "Aprendé a operar los seguros de seguridad rotando la barra antes de cargar peso.",
+      "Para sentadillas: posicioná los pies ligeramente adelante respecto a tu cadera."
+    ],
+    "how_to": [
+      "Siempre activá los seguros rotando la barra antes de descansar el peso.",
+      "Realizá el movimiento seleccionado de forma lenta y controlada.",
+      "Mantén el torso estable y la columna neutra durante todo el recorrido.",
+      "Al finalizar, asegurate de trabar la barra antes de soltarla."
+    ],
+    "common_errors": [
+      "No aprender a usar los seguros de seguridad correctamente.",
+      "Colocar los pies muy atrás en sentadillas (estrés en rodilla).",
+      "Usar la trayectoria fija como excusa para descuidar la postura.",
+      "Cargar demasiado peso sin dominar la técnica básica."
+    ],
+    "tips": [
+      "La Smith es ideal para aprender la mecánica de los grandes movimientos.",
+      "Perfecta para entrenar solo sin necesidad de un compañero.",
+      "Combinala con ejercicios libres para un desarrollo completo.",
+      "La trayectoria guiada permite focalizarte 100% en la activación muscular."
+    ]
+  }
+]

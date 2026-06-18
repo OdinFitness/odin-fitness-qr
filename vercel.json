@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "odin-fitness-maquinas",
+  "builds": [
+    { "src": "**/*.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/prensa-45", "dest": "/machines/prensa-45.html" },
+    { "src": "/hack-squat", "dest": "/machines/hack-squat.html" },
+    { "src": "/remo-bajo", "dest": "/machines/remo-bajo.html" },
+    { "src": "/press-pecho", "dest": "/machines/press-pecho.html" },
+    { "src": "/jalon-dorsal", "dest": "/machines/jalon-dorsal.html" },
+    { "src": "/smith-machine", "dest": "/machines/smith-machine.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
