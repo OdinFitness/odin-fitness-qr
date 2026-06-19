@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta name="description" content="Guía de uso: Hip Glute Selector — Odin Fitness">
+    <title>Hip Glute Selector · Odin Fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ── RESET & BASE ─────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --black:       #0A0A0A;
+            --dark:        #111111;
+            --surface:     #181818;
+            --surface-2:   #1F1F1F;
+            --border:      #2A2A2A;
+            --border-light: #333333;
+            --gold:        #C8A951;
+            --gold-dim:    #9E8140;
+            --gold-glow:   rgba(200,169,81,0.15);
+            --white:       #F5F5F5;
+            --white-dim:   #AAAAAA;
+            --white-faint: #666666;
+            --error:       #E05454;
+            --success:     #4CAF82;
+            --font-display: 'Barlow Condensed', sans-serif;
+            --font-body:    'Inter', sans-serif;
+            --radius:       12px;
+            --radius-sm:    8px;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ───────────────────────────────────────── */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-mark {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gold);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--black);
+            font-family: var(--font-display);
+            letter-spacing: -0.5px;
+        }
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .logo-text span {
+            color: var(--gold);
+        }
+        .header-code {
+            font-family: var(--font-body);
+            font-size: 11px;
+            color: var(--white-faint);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── HERO ─────────────────────────────────────────── */
+        .hero {
+            background: var(--dark);
+            padding: 32px 20px 28px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -40px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--gold-glow);
+            border: 1px solid rgba(200,169,81,0.3);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .hero-emoji {
+            font-size: 52px;
+            line-height: 1;
+            margin-bottom: 12px;
+            display: block;
+            filter: drop-shadow(0 0 20px rgba(200,169,81,0.3));
+        }
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .hero-title span {
+            color: var(--gold);
+        }
+        .hero-sub {
+            font-size: 14px;
+            color: var(--white-dim);
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 300px;
+        }
+        .hero-muscles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 20px;
+        }
+        .muscle-tag {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--white-dim);
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .muscle-tag:first-child {
+            background: var(--gold-glow);
+            border-color: rgba(200,169,81,0.3);
+            color: var(--gold);
+        }
+        .hero-difficulty {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--white-faint);
+        }
+        .difficulty-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+        }
+
+        /* ── SECTION STRUCTURE ────────────────────────────── */
+        .content {
+            padding: 0 0 40px;
+        }
+        .section {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        /* ── VIDEO ────────────────────────────────────────── */
+        .video-section {
+            padding: 20px;
+            background: var(--dark);
+            border-bottom: 1px solid var(--border);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-label {
+            font-size: 11px;
+            color: var(--white-faint);
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* ── DESCRIPTION ──────────────────────────────────── */
+        .description-text {
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--white-dim);
+        }
+
+        /* ── STEP LISTS ───────────────────────────────────── */
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+        }
+        .step-num {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--gold);
+            min-width: 28px;
+            line-height: 1.2;
+        }
+        .step-list li span:last-child {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--white-dim);
+        }
+
+        /* ── ICON LISTS ───────────────────────────────────── */
+        .icon-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .icon-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .icon-x, .icon-check {
+            font-size: 14px;
+            font-weight: 700;
+            min-width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .icon-x {
+            background: rgba(224,84,84,0.15);
+            color: var(--error);
+        }
+        .icon-check {
+            background: rgba(76,175,130,0.15);
+            color: var(--success);
+        }
+        .error-list li {
+            background: rgba(224,84,84,0.05);
+            border: 1px solid rgba(224,84,84,0.15);
+            color: #D4AAAA;
+        }
+        .tips-list li {
+            background: rgba(76,175,130,0.05);
+            border: 1px solid rgba(76,175,130,0.15);
+            color: #A8CFBB;
+        }
+
+        /* ── DIVIDER ──────────────────────────────────────── */
+        .gold-divider {
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+            margin: 0;
+            opacity: 0.6;
+        }
+
+        /* ── CTA COMERCIAL ────────────────────────────────── */
+        .cta-section {
+            padding: 32px 20px;
+            background: linear-gradient(135deg, #0F0E09 0%, var(--dark) 100%);
+            border-top: 1px solid rgba(200,169,81,0.2);
+        }
+        .cta-eyebrow {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+        .cta-title em {
+            color: var(--gold);
+            font-style: normal;
+        }
+        .cta-sub {
+            font-size: 14px;
+            color: var(--white-dim);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            letter-spacing: 0.3px;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.25);
+        }
+        .btn-whatsapp:active {
+            box-shadow: 0 2px 10px rgba(37,211,102,0.2);
+        }
+        .btn-catalog {
+            background: var(--gold);
+            color: var(--black);
+            box-shadow: 0 4px 20px rgba(200,169,81,0.25);
+            font-weight: 700;
+        }
+        .btn-budget {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--border-light);
+        }
+        .btn-icon {
+            font-size: 18px;
+        }
+        .cta-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+        .trust-num {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        .trust-label {
+            font-size: 10px;
+            color: var(--white-faint);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .trust-sep {
+            width: 1px;
+            height: 32px;
+            background: var(--border);
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        .site-footer {
+            background: var(--black);
+            border-top: 1px solid var(--border);
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white-faint);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .footer-logo span { color: var(--gold); }
+        .footer-sub {
+            font-size: 11px;
+            color: var(--white-faint);
+            opacity: 0.6;
+        }
+
+        /* ── SCROLL ANIMATION ─────────────────────────────── */
+        @media (prefers-reduced-motion: no-preference) {
+            .fade-in {
+                opacity: 0;
+                transform: translateY(16px);
+                animation: fadeUp 0.5s ease forwards;
+            }
+            .fade-in:nth-child(2) { animation-delay: 0.1s; }
+            .fade-in:nth-child(3) { animation-delay: 0.2s; }
+            @keyframes fadeUp {
+                to { opacity: 1; transform: translateY(0); }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <a href="/" class="logo-mark">
+            <div class="logo-icon">O</div>
+            <span class="logo-text">Odin <span>Fitness</span></span>
+        </a>
+        <span class="header-code">TY39</span>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">Glúteos</div>
+        <span class="hero-emoji">🍑</span>
+        <h1 class="hero-title">Hip Glute Selector</h1>
+        <p class="hero-sub">Guía completa de uso y técnica</p>
+        <div class="hero-muscles"><span class="muscle-tag">Glúteo mayor</span><span class="muscle-tag">Isquiotibiales</span><span class="muscle-tag">Erector espinal</span></div>
+        <div class="hero-difficulty">
+            <span class="difficulty-dot"></span>
+            <span>Principiante</span>
+        </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+
+        <!-- VIDEO -->
+        <div class="video-section">
+            
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/LM8XHLYJoYs"
+            title="Video: Hip Glute Selector"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+            <p class="video-label">Video demostrativo de técnica correcta</p>
+        </div>
+
+        <!-- DESCRIPCIÓN -->
+        <section class="section">
+            <div class="section-label">Sobre esta máquina</div>
+            <h2 class="section-title">¿Para qué sirve?</h2>
+            <p class="description-text">El Hip Glute TY39 con selector PIN es la versión económica de la máquina de extensión de cadera. Ideal para trabajo de glúteos con cambio rápido de peso entre series.</p>
+        </section>
+
+        <!-- CONFIGURACIÓN -->
+        <section class="section" style="background: var(--dark);">
+            <div class="section-label">Antes de empezar</div>
+            <h2 class="section-title">Ajustes Básicos</h2>
+            <ol class="step-list"><li><span class="step-num">01</span><span>Ajustá la máquina según tu altura.</span></li><li><span class="step-num">02</span><span>Posicioná el apoyador en la zona de la cadera/cuádriceps.</span></li><li><span class="step-num">03</span><span>Apoyá bien el torso en el soporte frontal.</span></li><li><span class="step-num">04</span><span>Seleccioná el peso con el pin del selector.</span></li></ol>
+        </section>
+
+        <!-- CÓMO USAR -->
+        <section class="section">
+            <div class="section-label">Ejecución</div>
+            <h2 class="section-title">Cómo Usarla</h2>
+            <ol class="step-list"><li><span class="step-num">01</span><span>Extendé la cadera hacia arriba contrayendo el glúteo.</span></li><li><span class="step-num">02</span><span>Apretá el glúteo en el punto más alto por 2 segundos.</span></li><li><span class="step-num">03</span><span>Volvé lentamente a la posición inicial.</span></li><li><span class="step-num">04</span><span>No hiperextendas la columna lumbar al finalizar.</span></li></ol>
+        </section>
+
+        <!-- ERRORES COMUNES -->
+        <section class="section" style="background: var(--dark);">
+            <div class="section-label">Evitá lesiones</div>
+            <h2 class="section-title">Errores Comunes</h2>
+            <ul class="icon-list error-list"><li><span class="icon-x">✕</span><span>Usar la espalda en lugar del glúteo para extender.</span></li><li><span class="icon-x">✕</span><span>No contraer el glúteo en el punto máximo.</span></li><li><span class="icon-x">✕</span><span>Hacer el movimiento demasiado rápido.</span></li><li><span class="icon-x">✕</span><span>Hiperextender la columna al llegar arriba.</span></li></ul>
+        </section>
+
+        <!-- CONSEJOS -->
+        <section class="section">
+            <div class="section-label">Optimizá tus resultados</div>
+            <h2 class="section-title">Consejos de Ejecución</h2>
+            <ul class="icon-list tips-list"><li><span class="icon-check">✓</span><span>La contracción isométrica arriba construye el glúteo.</span></li><li><span class="icon-check">✓</span><span>Tempo: 2 subir, 2 apretar, 3 bajar.</span></li><li><span class="icon-check">✓</span><span>Pensá en 'empujar el suelo' con la cadera.</span></li><li><span class="icon-check">✓</span><span>Combinalo con sentadillas y peso muerto para máximo desarrollo.</span></li></ul>
+        </section>
+
+        <!-- CTA COMERCIAL -->
+        <section class="cta-section">
+            <div class="cta-eyebrow">Odin Fitness — Equipamiento Profesional</div>
+            <h2 class="cta-title">¿Querés equipar tu <em>gimnasio</em>?</h2>
+            <p class="cta-sub">Equipamiento de nivel profesional importado. Financiación en cuotas fijas en dólares. Armado incluido.</p>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/541134673115?text=Hola%20Odin%20Fitness%2C%20estoy%20interesado%20en%20equipar%20mi%20gimnasio%20%F0%9F%92%AA"
+                   class="btn btn-whatsapp" target="_blank" rel="noopener">
+                    <span class="btn-icon">💬</span>
+                    Hablar con un asesor
+                </a>
+                <a href="https://wa.me/541134673115?text=Hola%2C%20quisiera%20recibir%20el%20cat%C3%A1logo%20de%20Odin%20Fitness"
+                   class="btn btn-catalog" target="_blank" rel="noopener">
+                    <span class="btn-icon">📋</span>
+                    Solicitar Catálogo
+                </a>
+                <a href="https://wa.me/541134673115?text=Hola%2C%20quisiera%20solicitar%20un%20presupuesto%20para%20mi%20gimnasio"
+                   class="btn btn-budget" target="_blank" rel="noopener">
+                    <span class="btn-icon">📊</span>
+                    Pedir Presupuesto
+                </a>
+            </div>
+
+            <div class="cta-trust">
+                <div class="trust-item">
+                    <span class="trust-num">+500</span>
+                    <span class="trust-label">Equipos instalados</span>
+                </div>
+                <div class="trust-sep"></div>
+                <div class="trust-item">
+                    <span class="trust-num">6M</span>
+                    <span class="trust-label">Garantía</span>
+                </div>
+                <div class="trust-sep"></div>
+                <div class="trust-item">
+                    <span class="trust-num">4M</span>
+                    <span class="trust-label">Entrega</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-logo">Odin <span>Fitness</span></div>
+        <p class="footer-sub">Av. Figueroa Alcorta 3351, Palermo, Buenos Aires</p>
+    </footer>
+
+</body>
+</html>
